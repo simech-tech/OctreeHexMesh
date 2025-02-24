@@ -1109,6 +1109,8 @@ void  orient_surface_mesh(Mesh &hmi) {
 		for (uint32_t i = 0; i < hmi.Fs.size(); i++) std::reverse(hmi.Fs[i].vs.begin(), hmi.Fs[i].vs.end());
 	}
 }
+
+/*
 void  orient_triangle_mesh_acw(Mesh &hmi) {
 
 	Eigen::MatrixXd V = hmi.V.transpose();
@@ -1125,7 +1127,8 @@ void  orient_triangle_mesh_acw(Mesh &hmi) {
 	}
 	for (uint32_t i = 0; i < FF.rows(); i++)
 		for (uint32_t j = 0; j < 3; j++)hmi.Fs[i].vs[j] = FF(i, j);
-}
+}*/
+
 void orient_triangle_mesh(Mesh &hmi) {
 	vector<vector<Float>> p(hmi.V.cols()); vector<vector<uint32_t>> f(hmi.Fs.size());
 	for (uint32_t i = 0; i<hmi.V.cols(); i++){

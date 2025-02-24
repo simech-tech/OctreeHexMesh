@@ -44,7 +44,7 @@ void extract_surface_mesh(Mesh &meshi, Mesh &mesho);
 void extract_surface_conforming_mesh(Mesh &meshi, Mesh &mesho, vector<int32_t> &V_map, vector<int32_t> &V_map_reverse, vector<int32_t> &F_map, vector<int32_t> &F_map_reverse);
 void  orient_surface_mesh(Mesh &hmi);
 void  orient_triangle_mesh(Mesh &hmi); 
-void  orient_triangle_mesh_acw(Mesh &hmi);
+// void  orient_triangle_mesh_acw(Mesh& hmi)
 void  orient_triangle_mesh(MatrixXd &Tri_V, MatrixXi &Tri_F);
 Float	uctet(vector<Float> a, vector<Float> b, vector<Float> c, vector<Float> d);
 
