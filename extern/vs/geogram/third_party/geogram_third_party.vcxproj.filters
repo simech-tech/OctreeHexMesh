@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\LM7\libmeshb7.c">
+      <Filter>Source Files\LM6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\rply\rply.c">
+      <Filter>Source Files\rply</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\adler32.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\compress.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\crc32.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\deflate.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\gzclose.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\gzlib.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\gzread.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\gzwrite.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inffast.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inflate.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inftrees.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\trees.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\uncompr.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\zutil.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\gzstream\gzstream.cpp">
+      <Filter>Source Files\gzstream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Factor.cpp">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Geometry.cpp">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\MarchingCubes.cpp">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\poisson_geogram.cpp">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\pstdint.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\LM7\libmeshb7.h">
+      <Filter>Source Files\LM6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\rply\rply.h">
+      <Filter>Source Files\rply</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\rply\rplyfile.h">
+      <Filter>Source Files\rply</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\crc32.h">
+      <Filter>Source Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\deflate.h">
+      <Filter>Source Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\gzguts.h">
+      <Filter>Source Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inffast.h">
+      <Filter>Source Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inffixed.h">
+      <Filter>Source Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inflate.h">
+      <Filter>Source Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inftrees.h">
+      <Filter>Source Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\trees.h">
+      <Filter>Source Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\zconf.h">
+      <Filter>Source Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\zlib.h">
+      <Filter>Source Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\zutil.h">
+      <Filter>Source Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\gzstream\gzstream.h">
+      <Filter>Source Files\gzstream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Allocator.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Array.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\BSplineData.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\BinaryNode.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Factor.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\FunctionData.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Geometry.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Hash.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\MAT.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\MarchingCubes.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\MemoryUsage.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\MultiGridOctreeData.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\MyTime.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Octree.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\PPolynomial.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\PlyVertexMini.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\PointStream.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Polynomial.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\SparseMatrix.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\poisson_geogram.h">
+      <Filter>Source Files\PoissonRecon</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\extern\geogram\src\lib\geogram\third_party\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A5CC3326-AB64-31C3-A947-A8E267A97041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LM6">
+      <UniqueIdentifier>{93E2C800-0213-3FEC-957B-AFD7FC23B3E7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PoissonRecon">
+      <UniqueIdentifier>{1A487FF3-4466-3FF2-A889-9C90CBEA54F8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gzstream">
+      <UniqueIdentifier>{5AA3BD13-3508-39C3-AE0D-7A0CE0BDB78B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\rply">
+      <UniqueIdentifier>{A9FF40E3-C9C3-34C9-98F6-E25045138DCD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\zlib">
+      <UniqueIdentifier>{B9D18311-C108-3531-93F4-67222FE6890E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -11,10 +11,10 @@ public:
 	optimization() {};
 	~optimization() {};
 
-	bool pipeline();
+	bool pipeline(const char* path_out);
 
 	bool fix_boundary();
-	bool gluing();
+	bool gluing(const char* path_out);
 	bool tetralize_mesh(Tetralize_Set &ts, Mesh &mesh_r);
 	bool recovering();
 	bool tetralize_meshO(Tetralize_Set &ts, Mesh &mesh_r);

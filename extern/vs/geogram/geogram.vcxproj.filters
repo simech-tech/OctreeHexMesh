@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\algorithm.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\assert.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\attributes.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\b_stream.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\command_line.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\command_line_args.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\common.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\counted.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\environment.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\factory.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\file_system.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\geofile.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\geometry.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\line_stream.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\logger.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\numeric.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\packed_arrays.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\process.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\process_unix.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\process_win.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\progress.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\quaternion.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\stopwatch.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\basic\string.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\numerics\expansion_nt.cpp">
+      <Filter>Source Files\numerics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\numerics\lbfgs_optimizers.cpp">
+      <Filter>Source Files\numerics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\numerics\matrix_util.cpp">
+      <Filter>Source Files\numerics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\numerics\multi_precision.cpp">
+      <Filter>Source Files\numerics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\numerics\optimizer.cpp">
+      <Filter>Source Files\numerics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\numerics\predicates.cpp">
+      <Filter>Source Files\numerics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_AABB.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_compare.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_decimate.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_degree3_vertices.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_distance.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_fill_holes.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_frame_field.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_geometry.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_halfedges.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_intersection.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_io.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_manifold_harmonics.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_partition.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_preprocessing.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_remesh.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_reorder.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_repair.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_smoothing.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_subdivision.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_tetrahedralize.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_topology.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\mesh\triangle_intersection.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\delaunay\LFS.cpp">
+      <Filter>Source Files\delaunay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\delaunay\delaunay.cpp">
+      <Filter>Source Files\delaunay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\delaunay\delaunay_2d.cpp">
+      <Filter>Source Files\delaunay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\delaunay\delaunay_3d.cpp">
+      <Filter>Source Files\delaunay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\delaunay\delaunay_nn.cpp">
+      <Filter>Source Files\delaunay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\delaunay\delaunay_tetgen.cpp">
+      <Filter>Source Files\delaunay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\delaunay\delaunay_triangle.cpp">
+      <Filter>Source Files\delaunay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\delaunay\parallel_delaunay_3d.cpp">
+      <Filter>Source Files\delaunay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\voronoi\CVT.cpp">
+      <Filter>Source Files\voronoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\voronoi\RVD.cpp">
+      <Filter>Source Files\voronoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\voronoi\RVD_callback.cpp">
+      <Filter>Source Files\voronoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\voronoi\RVD_mesh_builder.cpp">
+      <Filter>Source Files\voronoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\voronoi\generic_RVD_cell.cpp">
+      <Filter>Source Files\voronoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\voronoi\generic_RVD_polygon.cpp">
+      <Filter>Source Files\voronoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\voronoi\integration_simplex.cpp">
+      <Filter>Source Files\voronoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\points\co3ne.cpp">
+      <Filter>Source Files\points</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\points\colocate.cpp">
+      <Filter>Source Files\points</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\points\kd_tree.cpp">
+      <Filter>Source Files\points</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\points\nn_search.cpp">
+      <Filter>Source Files\points</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\NL\nl_api.c">
+      <Filter>Source Files\NL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\NL\nl_arpack.c">
+      <Filter>Source Files\NL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\NL\nl_blas.c">
+      <Filter>Source Files\NL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\NL\nl_cholmod.c">
+      <Filter>Source Files\NL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\NL\nl_context.c">
+      <Filter>Source Files\NL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\NL\nl_cuda.c">
+      <Filter>Source Files\NL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\NL\nl_iterative_solvers.c">
+      <Filter>Source Files\NL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\NL\nl_matrix.c">
+      <Filter>Source Files\NL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\NL\nl_mkl.c">
+      <Filter>Source Files\NL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\NL\nl_os.c">
+      <Filter>Source Files\NL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\NL\nl_preconditioners.c">
+      <Filter>Source Files\NL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\NL\nl_superlu.c">
+      <Filter>Source Files\NL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_ABF.cpp">
+      <Filter>Source Files\parameterization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_LSCM.cpp">
+      <Filter>Source Files\parameterization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_PGP_2d.cpp">
+      <Filter>Source Files\parameterization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_atlas_maker.cpp">
+      <Filter>Source Files\parameterization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_global_param.cpp">
+      <Filter>Source Files\parameterization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_param_packer.cpp">
+      <Filter>Source Files\parameterization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_param_validator.cpp">
+      <Filter>Source Files\parameterization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_segmentation.cpp">
+      <Filter>Source Files\parameterization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\bibliography\bibliography.cpp">
+      <Filter>Source Files\bibliography</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\geogram\src\lib\geogram\bibliography\embedded_references.cpp">
+      <Filter>Source Files\bibliography</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\algorithm.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\argused.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\assert.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\atomics.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\attributes.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\b_stream.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\command_line.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\command_line_args.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\common.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\counted.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\environment.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\factory.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\file_system.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\geofile.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\geometry.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\geometry_nd.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\line_stream.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\logger.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\matrix.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\memory.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\numeric.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\packed_arrays.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\permutation.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\process.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\process_private.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\progress.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\psm.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\quaternion.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\smart_pointer.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\stopwatch.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\string.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\thread_sync.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\basic\vecg.h">
+      <Filter>Source Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\numerics\expansion_nt.h">
+      <Filter>Source Files\numerics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\numerics\lbfgs_optimizers.h">
+      <Filter>Source Files\numerics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\numerics\matrix_util.h">
+      <Filter>Source Files\numerics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\numerics\multi_precision.h">
+      <Filter>Source Files\numerics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\numerics\optimizer.h">
+      <Filter>Source Files\numerics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\numerics\predicates.h">
+      <Filter>Source Files\numerics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\index.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_AABB.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_compare.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_decimate.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_degree3_vertices.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_distance.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_fill_holes.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_frame_field.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_geometry.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_halfedges.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_intersection.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_io.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_manifold_harmonics.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_partition.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_preprocessing.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_remesh.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_reorder.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_repair.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_sampling.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_smoothing.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_subdivision.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_tetrahedralize.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\mesh_topology.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\mesh\triangle_intersection.h">
+      <Filter>Source Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\delaunay\LFS.h">
+      <Filter>Source Files\delaunay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\delaunay\delaunay.h">
+      <Filter>Source Files\delaunay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\delaunay\delaunay_2d.h">
+      <Filter>Source Files\delaunay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\delaunay\delaunay_3d.h">
+      <Filter>Source Files\delaunay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\delaunay\delaunay_nn.h">
+      <Filter>Source Files\delaunay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\delaunay\delaunay_tetgen.h">
+      <Filter>Source Files\delaunay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\delaunay\delaunay_triangle.h">
+      <Filter>Source Files\delaunay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\delaunay\parallel_delaunay_3d.h">
+      <Filter>Source Files\delaunay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\voronoi\CVT.h">
+      <Filter>Source Files\voronoi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\voronoi\RVD.h">
+      <Filter>Source Files\voronoi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\voronoi\RVD_callback.h">
+      <Filter>Source Files\voronoi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\voronoi\RVD_mesh_builder.h">
+      <Filter>Source Files\voronoi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\voronoi\generic_RVD.h">
+      <Filter>Source Files\voronoi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\voronoi\generic_RVD_cell.h">
+      <Filter>Source Files\voronoi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\voronoi\generic_RVD_polygon.h">
+      <Filter>Source Files\voronoi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\voronoi\generic_RVD_utils.h">
+      <Filter>Source Files\voronoi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\voronoi\generic_RVD_vertex.h">
+      <Filter>Source Files\voronoi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\voronoi\integration_simplex.h">
+      <Filter>Source Files\voronoi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\points\co3ne.h">
+      <Filter>Source Files\points</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\points\colocate.h">
+      <Filter>Source Files\points</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\points\kd_tree.h">
+      <Filter>Source Files\points</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\points\nn_search.h">
+      <Filter>Source Files\points</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\api\defs.h">
+      <Filter>Source Files\api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_arpack.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_blas.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_cholmod.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_context.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_cuda.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_ext.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_iterative_solvers.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_linkage.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_matrix.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_mkl.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_preconditioners.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_private.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\NL\nl_superlu.h">
+      <Filter>Source Files\NL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_ABF.h">
+      <Filter>Source Files\parameterization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_LSCM.h">
+      <Filter>Source Files\parameterization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_PGP_2d.h">
+      <Filter>Source Files\parameterization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_atlas_maker.h">
+      <Filter>Source Files\parameterization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_global_param.h">
+      <Filter>Source Files\parameterization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_param_packer.h">
+      <Filter>Source Files\parameterization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_param_validator.h">
+      <Filter>Source Files\parameterization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\parameterization\mesh_segmentation.h">
+      <Filter>Source Files\parameterization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extern\geogram\src\lib\geogram\bibliography\bibliography.h">
+      <Filter>Source Files\bibliography</Filter>
+    </ClInclude>
+    <ClInclude Include="version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\extern\geogram\src\lib\geogram\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\libmeshb7.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\rply.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\adler32.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\compress.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\crc32.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\deflate.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\gzclose.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\gzlib.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\gzread.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\gzwrite.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\inffast.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\inflate.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\inftrees.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\trees.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\uncompr.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\zutil.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\gzstream.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\Factor.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\Geometry.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\MarchingCubes.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="third_party\geogram_third_party.dir\$(Configuration)\poisson_geogram.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{82417738-BD93-35BE-8F84-62CC75473FAB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{8A519F17-DFB4-32D9-8929-204259B249FD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A5CC3326-AB64-31C3-A947-A8E267A97041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NL">
+      <UniqueIdentifier>{5CF3B632-36C0-34A9-8DCE-C31AC5E922F5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\api">
+      <UniqueIdentifier>{4434B4AA-AD80-3D53-B6C6-7A1AD543C9E7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\basic">
+      <UniqueIdentifier>{08B6D5C7-488D-3CD0-BC49-070C0DB4F7DC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bibliography">
+      <UniqueIdentifier>{5F6A8C1D-E999-3F2E-A5A0-9ED23274E822}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\delaunay">
+      <UniqueIdentifier>{2A272AB1-BB4A-3FF4-BAF2-B08A9C863FCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mesh">
+      <UniqueIdentifier>{BC0B0991-7F30-3A70-A099-8CA0D489CC49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\numerics">
+      <UniqueIdentifier>{F8307CBE-07B1-33AE-900A-CB2A42F336AC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\parameterization">
+      <UniqueIdentifier>{D98028CE-2ADE-3F36-A452-729B94A128BF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\points">
+      <UniqueIdentifier>{C7303900-2DDE-3368-BFC6-28907D8D086A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\voronoi">
+      <UniqueIdentifier>{8DD97E24-1E2F-396D-B09E-BA2C09CD5AD6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

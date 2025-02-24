@@ -19,40 +19,45 @@
 
 bool endswith(std::string const &str, std::string const &ending);
 template <typename Scalar, size_t Rows>
-inline std::ostream& operator<<(std::ostream &out, std::array<Scalar, Rows> v) {
+inline std::ostream &operator<<(std::ostream &out, std::array<Scalar, Rows> v)
+{
 	out << "{";
-	if (!v.empty()) {
+	if (!v.empty())
+	{
 		std::copy(v.begin(), v.end() - 1, std::ostream_iterator<Scalar>(out, "; "));
 		out << v.back();
 	}
 	out << "}";
 	return out;
 }
-namespace Layout {
+namespace Layout
+{
 	GEO::vec3i index3_from_index(int idx, GEO::vec3i size);
 	int index_from_index3(GEO::vec3i vx, GEO::vec3i size);
 }
-namespace GEO {
+namespace GEO
+{
 	bool filename_has_supported_extension(const std::string &filename);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
-template<typename T>
-class VoxelGrid {
+template <typename T>
+class VoxelGrid
+{
 private:
 	// Member data
 	std::vector<T> m_data;
-	GEO::vec3      m_origin;
-	double         m_spacing; // voxel size (in mm)
-	GEO::vec3i     m_grid_size;
+	GEO::vec3 m_origin;
+	double m_spacing; // voxel size (in mm)
+	GEO::vec3i m_grid_size;
 
 public:
 	// Interface
 	VoxelGrid(GEO::vec3 origin, GEO::vec3 extent, double voxel_size, int padding);
 
 	GEO::vec3i grid_size() const { return m_grid_size; }
-	int num_voxels() const { return m_grid_size[0] * m_grid_size[1]  * m_grid_size[2]; }
+	int num_voxels() const { return m_grid_size[0] * m_grid_size[1] * m_grid_size[2]; }
 
 	GEO::vec3 origin() const { return m_origin; }
 	double spacing() const { return m_spacing; }
@@ -63,26 +68,26 @@ public:
 	GEO::vec3 voxel_center(int x, int y, int z) const;
 
 	const T at(int idx) const { return m_data[idx]; }
-	T & at(int idx) { return m_data[idx]; }
-	const T * rawbuf() const { return m_data.data(); }
-	T * raw_layer(int z) { return m_data.data() + z * m_grid_size[1] * m_grid_size[0]; }
+	T &at(int idx) { return m_data[idx]; }
+	const T *rawbuf() const { return m_data.data(); }
+	T *raw_layer(int z) { return m_data.data() + z * m_grid_size[1] * m_grid_size[0]; }
 };
-template<typename T>
+template <typename T>
 VoxelGrid<T>::VoxelGrid(GEO::vec3 origin, GEO::vec3 extent, double spacing, int padding)
-	: m_origin(origin)
-	, m_spacing(spacing)
+	: m_origin(origin), m_spacing(spacing)
 {
 	m_origin -= padding * spacing * GEO::vec3(1, 1, 1);
 	m_grid_size[0] = (int)std::ceil(extent[0] / spacing) + 2 * padding;
 	m_grid_size[1] = (int)std::ceil(extent[1] / spacing) + 2 * padding;
 	m_grid_size[2] = (int)std::ceil(extent[2] / spacing) + 2 * padding;
 	GEO::Logger::out("Voxels") << "Grid size: "
-		<< m_grid_size[0] << " x " << m_grid_size[1] << " x " << m_grid_size[2] << std::endl;
+							   << m_grid_size[0] << " x " << m_grid_size[1] << " x " << m_grid_size[2] << std::endl;
 	m_data.assign(m_grid_size[0] * m_grid_size[1] * m_grid_size[2], T(0));
 }
 
-template<typename T>
-GEO::vec3 VoxelGrid<T>::voxel_center(int x, int y, int z) const {
+template <typename T>
+GEO::vec3 VoxelGrid<T>::voxel_center(int x, int y, int z) const
+{
 	GEO::vec3 pos;
 	pos[0] = (x + 0.5) * m_spacing;
 	pos[1] = (y + 0.5) * m_spacing;
@@ -92,14 +97,15 @@ GEO::vec3 VoxelGrid<T>::voxel_center(int x, int y, int z) const {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-template<typename T>
-class DexelGrid {
+template <typename T>
+class DexelGrid
+{
 private:
 	// Member data
-	std::vector<std::vector<T> > m_data;
-	GEO::vec3      m_origin;
-	double         m_spacing; // voxel size (in mm)
-	GEO::vec2i     m_grid_size;
+	std::vector<std::vector<T>> m_data;
+	GEO::vec3 m_origin;
+	double m_spacing; // voxel size (in mm)
+	GEO::vec2i m_grid_size;
 
 public:
 	// Interface
@@ -113,24 +119,24 @@ public:
 
 	GEO::vec2 dexel_center(int x, int y) const;
 
-	const std::vector<T> & at(int x, int y) const { return m_data[x + m_grid_size[0]*y]; }
-	std::vector<T> & at(int x, int y) { return m_data[x + m_grid_size[0]*y]; }
+	const std::vector<T> &at(int x, int y) const { return m_data[x + m_grid_size[0] * y]; }
+	std::vector<T> &at(int x, int y) { return m_data[x + m_grid_size[0] * y]; }
 };
-template<typename T>
+template <typename T>
 DexelGrid<T>::DexelGrid(GEO::vec3 origin, GEO::vec3 extent, double spacing, int padding)
-	: m_origin(origin)
-	, m_spacing(spacing)
+	: m_origin(origin), m_spacing(spacing)
 {
 	m_origin -= padding * spacing * GEO::vec3(1, 1, 1);
 	m_grid_size[0] = (int)std::ceil(extent[0] / spacing) + 2 * padding;
 	m_grid_size[1] = (int)std::ceil(extent[1] / spacing) + 2 * padding;
 	GEO::Logger::out("Voxels") << "Grid size: "
-		<< m_grid_size[0] << " x " << m_grid_size[1] << std::endl;
+							   << m_grid_size[0] << " x " << m_grid_size[1] << std::endl;
 	m_data.assign(m_grid_size[0] * m_grid_size[1], std::vector<T>(0));
 }
 
-template<typename T>
-GEO::vec2 DexelGrid<T>::dexel_center(int x, int y) const {
+template <typename T>
+GEO::vec2 DexelGrid<T>::dexel_center(int x, int y) const
+{
 	GEO::vec2 pos;
 	pos[0] = (x + 0.5) * m_spacing;
 	pos[1] = (y + 0.5) * m_spacing;
@@ -166,7 +172,8 @@ bool point_in_triangle_2d(
 // \retval NEGATIVE if the triangle is oriented negatively
 // \todo check whether orientation is inverted as compared to
 //   Shewchuk's version.
-inline GEO::Sign orient_2d_inexact(GEO::vec2 p0, GEO::vec2 p1, GEO::vec2 p2) {
+inline GEO::Sign orient_2d_inexact(GEO::vec2 p0, GEO::vec2 p1, GEO::vec2 p2)
+{
 	double a11 = p1[0] - p0[0];
 	double a12 = p1[1] - p0[1];
 
@@ -175,41 +182,45 @@ inline GEO::Sign orient_2d_inexact(GEO::vec2 p0, GEO::vec2 p1, GEO::vec2 p2) {
 
 	double Delta = GEO::det2x2(
 		a11, a12,
-		a21, a22
-	);
+		a21, a22);
 
 	return GEO::geo_sgn(Delta);
 }
 
 /**
-* @brief      { Intersect a vertical ray with a triangle }
-*
-* @param[in]  M     { Mesh containing the triangle to intersect }
-* @param[in]  f     { Index of the facet to intersect }
-* @param[in]  q     { Query point (only XY coordinates are used) }
-* @param[out] z     { Intersection }
-*
-* @return     { {-1,0,1} depending on the sign of the intersection. }
-*/
-template<int X = 0, int Y = 1, int Z = 2>
-int intersect_ray_z(const GEO::Mesh &M, GEO::index_t f, const GEO::vec3 &q, double &z) {
+ * @brief      { Intersect a vertical ray with a triangle }
+ *
+ * @param[in]  M     { Mesh containing the triangle to intersect }
+ * @param[in]  f     { Index of the facet to intersect }
+ * @param[in]  q     { Query point (only XY coordinates are used) }
+ * @param[out] z     { Intersection }
+ *
+ * @return     { {-1,0,1} depending on the sign of the intersection. }
+ */
+template <int X = 0, int Y = 1, int Z = 2>
+int intersect_ray_z(const GEO::Mesh &M, GEO::index_t f, const GEO::vec3 &q, double &z)
+{
 	using namespace GEO;
 
 	index_t c = M.facets.corners_begin(f);
-	const vec3& p1 = Geom::mesh_vertex(M, M.facet_corners.vertex(c++));
-	const vec3& p2 = Geom::mesh_vertex(M, M.facet_corners.vertex(c++));
-	const vec3& p3 = Geom::mesh_vertex(M, M.facet_corners.vertex(c));
+	const vec3 &p1 = Geom::mesh_vertex(M, M.facet_corners.vertex(c++));
+	const vec3 &p2 = Geom::mesh_vertex(M, M.facet_corners.vertex(c++));
+	const vec3 &p3 = Geom::mesh_vertex(M, M.facet_corners.vertex(c));
 
 	double u, v, w;
 	if (point_in_triangle_2d(
-		q[X], q[Y], p1[X], p1[Y], p2[X], p2[Y], p3[X], p3[Y], u, v, w))
+			q[X], q[Y], p1[X], p1[Y], p2[X], p2[Y], p3[X], p3[Y], u, v, w))
 	{
-		z = u*p1[Z] + v*p2[Z] + w*p3[Z];
+		z = u * p1[Z] + v * p2[Z] + w * p3[Z];
 		auto sign = orient_2d_inexact(vec2(p1[X], p1[Y]), vec2(p2[X], p2[Y]), vec2(p3[X], p3[Y]));
-		switch (sign) {
-		case GEO::POSITIVE: return 1;
-		case GEO::NEGATIVE: return -1;
-		default: return 0;
+		switch (sign)
+		{
+		case GEO::POSITIVE:
+			return 1;
+		case GEO::NEGATIVE:
+			return -1;
+		default:
+			return 0;
 		}
 	}
 
@@ -217,13 +228,14 @@ int intersect_ray_z(const GEO::Mesh &M, GEO::index_t f, const GEO::vec3 &q, doub
 }
 // -----------------------------------------------------------------------------
 
-template<typename T>
+template <typename T>
 void compute_sign(const GEO::Mesh &M,
-	const GEO::MeshFacetsAABB &aabb_tree, VoxelGrid<T> &voxels)
+				  const GEO::MeshFacetsAABB &aabb_tree, VoxelGrid<T> &voxels)
 {
 	const GEO::vec3i size = voxels.grid_size();
 
-	try {
+	try
+	{
 		GEO::ProgressTask task("Ray marching", 100);
 
 		GEO::vec3 min_corner, max_corner;
@@ -232,7 +244,8 @@ void compute_sign(const GEO::Mesh &M,
 		const GEO::vec3 origin = voxels.origin();
 		const double spacing = voxels.spacing();
 
-		GEO::parallel_for([&](int y) {
+		GEO::parallel_for([&](int y)
+						  {
 			if (GEO::Thread::current()->id() == 0) {
 				task.progress((int)(100.0 * y / size[1] * GEO::Process::number_of_cores()));
 			}
@@ -263,22 +276,23 @@ void compute_sign(const GEO::Mesh &M,
 					const int idx = voxels.index_from_index3(GEO::vec3i(x, y, z));
 					voxels.at(idx) = T(s < 0 ? 1 : 0);
 				}
-			}
-		}, 0, size[1]);
+			} }, 0, size[1]);
 	}
-	catch (const GEO::TaskCanceled&) {
+	catch (const GEO::TaskCanceled &)
+	{
 		// Do early cleanup
 	}
 }
 // -----------------------------------------------------------------------------
 
-template<typename T>
+template <typename T>
 void compute_sign(const GEO::Mesh &M,
-	const GEO::MeshFacetsAABB &aabb_tree, DexelGrid<T> &dexels)
+				  const GEO::MeshFacetsAABB &aabb_tree, DexelGrid<T> &dexels)
 {
 	const GEO::vec2i size = dexels.grid_size();
 
-	try {
+	try
+	{
 		GEO::ProgressTask task("Ray marching", 100);
 
 		GEO::vec3 min_corner, max_corner;
@@ -287,7 +301,8 @@ void compute_sign(const GEO::Mesh &M,
 		const GEO::vec3 origin = dexels.origin();
 		const double spacing = dexels.spacing();
 
-		GEO::parallel_for([&](int y) {
+		GEO::parallel_for([&](int y)
+						  {
 			if (GEO::Thread::current()->id() == 0) {
 				// task.progress((int) (100.0 * y / size[1] * GEO::Process::number_of_cores()));
 			}
@@ -322,10 +337,10 @@ void compute_sign(const GEO::Mesh &M,
 
 				dexels.at(x, y).resize(reduced.size());
 				std::copy_n(reduced.begin(), reduced.size(), dexels.at(x, y).begin());
-			}
-		}, 0, size[1]);
+			} }, 0, size[1]);
 	}
-	catch (const GEO::TaskCanceled&) {
+	catch (const GEO::TaskCanceled &)
+	{
 		// Do early cleanup
 	}
 }
@@ -333,7 +348,7 @@ void compute_sign(const GEO::Mesh &M,
 // -----------------------------------------------------------------------------
 
 void compute_sign(const GEO::Mesh &M, const GEO::MeshFacetsAABB &aabb_tree,
-	OctreeGrid &octree, GEO::vec3 origin, double spacing);
+				  OctreeGrid &octree, GEO::vec3 origin, double spacing);
 ////////////////////////////////////////////////////////////////////////////////
 
 typedef unsigned char num_t;
@@ -349,15 +364,19 @@ void triangle_mesh_dump(std::string &filename, const VoxelGrid<num_t> &voxels);
 void volume_mesh_dump(std::string &filename, GEO::Mesh &mesh, const VoxelGrid<num_t> &voxels);
 // -----------------------------------------------------------------------------
 
-template<typename T>
-void dexel_dump(std::string &filename, const DexelGrid<T> &dexels) {
+template <typename T>
+void dexel_dump(std::string &filename, const DexelGrid<T> &dexels)
+{
 	using GEO::vec3;
 
 	GEO::Mesh mesh;
 
-	for (int y = 0; y < dexels.grid_size()[1]; ++y) {
-		for (int x = 0; x < dexels.grid_size()[0]; ++x) {
-			for (int i = 0; 2 * i < dexels.at(x, y).size(); ++i) {
+	for (int y = 0; y < dexels.grid_size()[1]; ++y)
+	{
+		for (int x = 0; x < dexels.grid_size()[0]; ++x)
+		{
+			for (int i = 0; 2 * i < dexels.at(x, y).size(); ++i)
+			{
 				GEO::vec3 xyz_min, xyz_max;
 				xyz_min[0] = dexels.origin()[0] + x * dexels.spacing();
 				xyz_min[1] = dexels.origin()[1] + y * dexels.spacing();
@@ -366,12 +385,13 @@ void dexel_dump(std::string &filename, const DexelGrid<T> &dexels) {
 				xyz_max[1] = dexels.origin()[1] + (y + 1) * dexels.spacing();
 				xyz_max[2] = dexels.at(x, y)[2 * i + 1];
 				vec3 diff[8] = {
-					vec3(0,0,0), vec3(1,0,0), vec3(0,1,0), vec3(1,1,0),
-					vec3(0,0,1), vec3(1,0,1), vec3(0,1,1), vec3(1,1,1)
-				};
+					vec3(0, 0, 0), vec3(1, 0, 0), vec3(0, 1, 0), vec3(1, 1, 0),
+					vec3(0, 0, 1), vec3(1, 0, 1), vec3(0, 1, 1), vec3(1, 1, 1)};
 				int v = mesh.vertices.nb();
-				for (int lv = 0; lv < 8; ++lv) {
-					for (int d = 0; d < 3; ++d) {
+				for (int lv = 0; lv < 8; ++lv)
+				{
+					for (int d = 0; d < 3; ++d)
+					{
 						diff[lv][d] = xyz_min[d] + diff[lv][d] * (xyz_max[d] - xyz_min[d]);
 					}
 					diff[lv] += dexels.origin();
@@ -391,7 +411,8 @@ void dexel_dump(std::string &filename, const DexelGrid<T> &dexels) {
 ////////////////////////////////////////////////////////////////////////////////
 
 // https://stackoverflow.com/questions/466204/rounding-up-to-next-power-of-2
-static unsigned next_pow2(unsigned x) {
+static unsigned next_pow2(unsigned x)
+{
 	x -= 1;
 	x |= (x >> 1);
 	x |= (x >> 2);
@@ -402,5 +423,5 @@ static unsigned next_pow2(unsigned x) {
 }
 
 void compute_octree(const GEO::Mesh &M, GEO::Mesh &mo, const GEO::MeshFacetsAABB &aabb_tree,
-	const std::string &filename, GEO::vec3 min_corner, GEO::vec3 extent,
-	double spacing, int padding, bool graded, bool paired);
+					const std::string &filename, GEO::vec3 min_corner, GEO::vec3 extent,
+					double spacing, int padding, bool graded, bool paired);

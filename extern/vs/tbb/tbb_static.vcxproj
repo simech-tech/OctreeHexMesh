@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B166F96C-8FEA-3BBB-BE00-EE40551FF8E1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>tbb_static</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tbb_static.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tbb_static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tbb_static.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tbb_static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tbb_static.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tbb_static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\extern\tbb\include;..\..\extern\tbb\src;..\..\extern\tbb\src\rml\include;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /volatile:iso /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4800;4146;4244;4577;4018</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;USE_WINTHREAD;WIN32;_WINDOWS;__TBB_BUILD=1;__TBB_NO_IMPLICIT_LINKAGE=1;DO_ITT_NOTIFY;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;USE_WINTHREAD;_WINDOWS;__TBB_BUILD=1;__TBB_NO_IMPLICIT_LINKAGE=1;DO_ITT_NOTIFY;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\extern\tbb\include;..\..\extern\tbb\src;..\..\extern\tbb\src\rml\include;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;USE_WINTHREAD;WIN32;_WINDOWS;__TBB_BUILD=1;__TBB_NO_IMPLICIT_LINKAGE=1;DO_ITT_NOTIFY;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <IncludePaths>..\..\extern\tbb\include;..\..\extern\tbb\src;..\..\extern\tbb\src\rml\include;..\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>%(AdditionalOptions) /EHsc /GR</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\extern\tbb\include;..\..\extern\tbb\src;..\..\extern\tbb\src\rml\include;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\extern\tbb\include;..\..\extern\tbb\src;..\..\extern\tbb\src\rml\include;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /volatile:iso /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4267;4800;4146;4244;4577;4018</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;USE_WINTHREAD;WIN32;_WINDOWS;NDEBUG;__TBB_BUILD=1;__TBB_NO_IMPLICIT_LINKAGE=1;DO_ITT_NOTIFY;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;USE_WINTHREAD;_WINDOWS;NDEBUG;__TBB_BUILD=1;__TBB_NO_IMPLICIT_LINKAGE=1;DO_ITT_NOTIFY;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\extern\tbb\include;..\..\extern\tbb\src;..\..\extern\tbb\src\rml\include;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;USE_WINTHREAD;WIN32;_WINDOWS;NDEBUG;__TBB_BUILD=1;__TBB_NO_IMPLICIT_LINKAGE=1;DO_ITT_NOTIFY;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <IncludePaths>..\..\extern\tbb\include;..\..\extern\tbb\src;..\..\extern\tbb\src\rml\include;..\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>%(AdditionalOptions) /EHsc /GR</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\extern\tbb\include;..\..\extern\tbb\src;..\..\extern\tbb\src\rml\include;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\extern\tbb\include;..\..\extern\tbb\src;..\..\extern\tbb\src\rml\include;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /volatile:iso /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4800;4146;4244;4577;4018</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;USE_WINTHREAD;WIN32;_WINDOWS;NDEBUG;__TBB_BUILD=1;__TBB_NO_IMPLICIT_LINKAGE=1;DO_ITT_NOTIFY;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;USE_WINTHREAD;_WINDOWS;NDEBUG;__TBB_BUILD=1;__TBB_NO_IMPLICIT_LINKAGE=1;DO_ITT_NOTIFY;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\extern\tbb\include;..\..\extern\tbb\src;..\..\extern\tbb\src\rml\include;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;USE_WINTHREAD;WIN32;_WINDOWS;NDEBUG;__TBB_BUILD=1;__TBB_NO_IMPLICIT_LINKAGE=1;DO_ITT_NOTIFY;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <IncludePaths>..\..\extern\tbb\include;..\..\extern\tbb\src;..\..\extern\tbb\src\rml\include;..\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>%(AdditionalOptions) /EHsc /GR</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\extern\tbb\include;..\..\extern\tbb\src;..\..\extern\tbb\src\rml\include;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\extern\tbb\src\old\concurrent_queue_v2.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\old\concurrent_vector_v2.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\old\spin_rw_mutex_v2.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\old\task_v2.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\arena.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\cache_aligned_allocator.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\concurrent_hash_map.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\concurrent_monitor.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\concurrent_queue.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\concurrent_vector.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\condition_variable.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\critical_section.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\dynamic_link.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\governor.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\itt_notify.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\market.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\mutex.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\observer_proxy.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\pipeline.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\private_server.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\queuing_mutex.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\queuing_rw_mutex.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\reader_writer_lock.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\recursive_mutex.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\scheduler.cpp">
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4458;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4458;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4458;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="..\..\extern\tbb\src\tbb\semaphore.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\spin_mutex.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\spin_rw_mutex.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\task.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\task_group_context.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\tbb_main.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\tbb_misc.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\tbb_misc_ex.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\tbb_statistics.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\tbb_thread.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\tbb\x86_rtm_rw_mutex.cpp" />
+    <ClCompile Include="..\..\extern\tbb\src\rml\client\rml_tbb.cpp" />
+    <MASM Include="..\..\extern\tbb\src\tbb\intel64-masm\atomic_support.asm" />
+    <MASM Include="..\..\extern\tbb\src\tbb\intel64-masm\itsx.asm" />
+    <MASM Include="..\..\extern\tbb\src\tbb\intel64-masm\intel64_misc.asm" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

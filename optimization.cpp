@@ -3,7 +3,7 @@
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 
-bool optimization::pipeline() {
+bool optimization::pipeline(const char* path_out) {
 	V_Boundary_flag.clear(); V_Boundary_flag.resize(mesh.Vs.size(), false);
 	BV.resize(mesh.Vs.size(), 3); BV.setZero();
 	for (auto v : mesh.Vs) {
@@ -12,7 +12,7 @@ bool optimization::pipeline() {
 	}
 
 
-	if (gluing()) recovering();
+	if (gluing(path_out)) recovering();
 	else cout << "optimization failure" << endl;
 	return true;
 };
@@ -265,7 +265,7 @@ vector<uint32_t> V_ranges; V_ranges.reserve(mesh.Vs.size());
 	return true;
 }
 
-bool optimization::gluing() {
+bool optimization::gluing(const char* path_out) {
 	//quality
 	scaled_jacobian(mesh, mq);
 	std::cout << "before: minimum scaled J: " << mq.min_Jacobian << " average scaled J: " << mq.ave_Jacobian << endl;

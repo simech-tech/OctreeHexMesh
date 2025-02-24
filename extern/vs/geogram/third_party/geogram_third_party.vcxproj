@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{48DD7685-ECD1-3594-8FFF-479EE06BFC7D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>geogram_third_party</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">geogram_third_party.dir\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">geogram_third_party.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">geogram_third_party</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">geogram_third_party.dir\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">geogram_third_party.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">geogram_third_party</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">geogram_third_party.dir\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">geogram_third_party.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">geogram_third_party</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\extern\geogram\src\lib;..\..\..\extern\geogram\src\lib\geogram_gfx\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4275;4996;4512;4245;4389</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;WIN32_LEAN_AND_MEAN;VC_EXTRALEAN;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;WIN32_LEAN_AND_MEAN;VC_EXTRALEAN;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\extern\geogram\src\lib;..\..\..\extern\geogram\src\lib\geogram_gfx\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;WIN32_LEAN_AND_MEAN;VC_EXTRALEAN;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <IncludePaths>..\..\..\extern\geogram\src\lib;..\..\..\extern\geogram\src\lib\geogram_gfx\third_party;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\extern\geogram\src\lib;..\..\..\extern\geogram\src\lib\geogram_gfx\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\extern\geogram\src\lib;..\..\..\extern\geogram\src\lib\geogram_gfx\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4275;4996;4512;4245;4389</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;WIN32_LEAN_AND_MEAN;VC_EXTRALEAN;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;WIN32_LEAN_AND_MEAN;VC_EXTRALEAN;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\extern\geogram\src\lib;..\..\..\extern\geogram\src\lib\geogram_gfx\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;WIN32_LEAN_AND_MEAN;VC_EXTRALEAN;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <IncludePaths>..\..\..\extern\geogram\src\lib;..\..\..\extern\geogram\src\lib\geogram_gfx\third_party;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\extern\geogram\src\lib;..\..\..\extern\geogram\src\lib\geogram_gfx\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\extern\geogram\src\lib;..\..\..\extern\geogram\src\lib\geogram_gfx\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4275;4996;4512;4245;4389</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;WIN32_LEAN_AND_MEAN;VC_EXTRALEAN;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;WIN32_LEAN_AND_MEAN;VC_EXTRALEAN;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\extern\geogram\src\lib;..\..\..\extern\geogram\src\lib\geogram_gfx\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;WIN32_LEAN_AND_MEAN;VC_EXTRALEAN;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <IncludePaths>..\..\..\extern\geogram\src\lib;..\..\..\extern\geogram\src\lib\geogram_gfx\third_party;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\extern\geogram\src\lib;..\..\..\extern\geogram\src\lib\geogram_gfx\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\pstdint.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\LM7\libmeshb7.c" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\LM7\libmeshb7.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\rply\rply.c" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\rply\rply.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\rply\rplyfile.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\adler32.c" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\compress.c" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\crc32.c" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\crc32.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\deflate.c" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\deflate.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\gzclose.c" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\gzguts.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\gzlib.c" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\gzread.c" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\gzwrite.c" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inffast.c" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inffast.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inffixed.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inflate.c" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inflate.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inftrees.c" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\inftrees.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\trees.c" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\trees.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\uncompr.c" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\zconf.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\zlib.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\zutil.c" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\zlib\zutil.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\gzstream\gzstream.cpp" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\gzstream\gzstream.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Allocator.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Array.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\BSplineData.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\BinaryNode.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Factor.cpp" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Factor.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\FunctionData.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Geometry.cpp" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Geometry.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Hash.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\MAT.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\MarchingCubes.cpp" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\MarchingCubes.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\MemoryUsage.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\MultiGridOctreeData.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\MyTime.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Octree.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\PPolynomial.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\PlyVertexMini.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\PointStream.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\Polynomial.h" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\SparseMatrix.h" />
+    <ClCompile Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\poisson_geogram.cpp" />
+    <ClInclude Include="..\..\..\extern\geogram\src\lib\geogram\third_party\PoissonRecon\poisson_geogram.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

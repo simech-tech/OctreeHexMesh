@@ -660,24 +660,33 @@ struct Collapse_Info {
 
 	vector<uint32_t> Hsregion;
 };
-struct arguments{
+
+class arguments{
+public:
 	string choice;
-	double Hausdorff_ratio_t = 0.005;
-	double edge_length_ratio = 15;
-	double edge_length = 0;
-	int Iteration_Base = 3;
-	bool Hard_Feature = true;
-	string input = "", output = "";
-	bool octree = true;
-	bool whole_domain = false;
-	int num_cell = 30;
-	int scaffold_layer = 3;
+	double Hausdorff_ratio_t;
+	double edge_length_ratio;
+	double edge_length;
+	int Iteration_Base;
+	bool Hard_Feature;
+	string input, output;
+	bool octree;
+	bool whole_domain;
+	int num_cell;
+	int scaffold_layer;
 //
-	bool pca_oobb = true;
-	int scaffold_type = 1;//1 box scaffold free boundary; 2 layered scaffold free boundary; 3 box scaffold fixed boundary; 4 layered scaffold fixed boundary.
-	double weight_opt = 1;
-	double feature_weight = 0.05;
+	bool pca_oobb;
+	int scaffold_type; //1 box scaffold free boundary; 2 layered scaffold free boundary; 3 box scaffold fixed boundary; 4 layered scaffold fixed boundary.
+	double weight_opt;
+	double feature_weight;
+
+	//
+public:
+	arguments();
+	arguments(arguments const& copy);
+	arguments& operator=(arguments const& copy);
 };
+
 struct Treestr {
 	Mesh mesh;
 	std::vector<int> v_map;
@@ -725,17 +734,3 @@ struct Mesh_Domain{
 	}
 
 };	
-
-extern arguments args;
-extern Mesh_Feature mf;
-extern GEO::Mesh M_i;	
-extern Feature_Graph fg;
-extern Feature_Graph Q_final_fg;
-extern vector<vector<uint32_t>> GRAPH_MATCHES;
-
-extern char path_out[300];
-//parallel
-extern int32_t GRAIN_SIZE;
-//meshes
-
-extern double diagonal_len;

@@ -8,6 +8,7 @@ h_io io;
 
 int main(int argc, char* argv[])
 {
+	arguments args;
 	CLI::App app{ "RobustHexMeshing" };
 	app.add_option("--ch", args.choice, "functionality choice")->required();
 	app.add_option("--in", args.input, "Input");
@@ -46,7 +47,7 @@ int main(int argc, char* argv[])
 			return 0;
 		}
 				
-		meshing m;
+		meshing m(args);
 
 		Timer<> timer;
 		timer.beginStage("START MESHING");

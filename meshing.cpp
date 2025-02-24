@@ -2,13 +2,19 @@
 #include "grid_meshing/grid_hex_meshing.h"
 using namespace std;
 
+
+meshing::meshing(arguments& args) 
+{
+	hex_meshing.args = args;
+}
+
 bool meshing::processing(string &path)
 {
 	//GEO::Mesh gtmesh;
 	Mesh tmesh;
 	tmesh.type = Mesh_type::Tri;
-	GEO::mesh_load(path + ".obj", M_i);
-	geomesh2mesh(M_i, tmesh);	
+	GEO::mesh_load(path + ".obj", hex_meshing.M_i);
+	geomesh2mesh(hex_meshing.M_i, tmesh);
 
 	if (!tmesh.Vs.size() || !tmesh.Fs.size())
 	{
@@ -23,9 +29,9 @@ bool meshing::processing(string &path)
 		return false;
 	}
 
-	mf.read_from_file = false;
-	if (io.read_feature_Graph_FGRAPH(mf, path + ".fgraph")) {
-		mf.read_from_file = true;
+	hex_meshing.mf.read_from_file = false;
+	if (io.read_feature_Graph_FGRAPH(hex_meshing.mf, path + ".fgraph")) {
+		hex_meshing.mf.read_from_file = true;
 	}
 
 	std::vector<Mesh> components;
@@ -38,7 +44,7 @@ bool meshing::processing(string &path)
 		std::cout << "components "<<i+1<<" of "<<components.size() << endl;
 		Eigen::MatrixXd T, IT;
 		forward_positioning(components[i], T);
-		mesh2geomesh(components[i], M_i);
+		mesh2geomesh(components[i], hex_meshing.M_i);
 		//preprocessing features
 		feature(components[i], path);
 		pipeline(results[i]);
@@ -51,20 +57,20 @@ bool meshing::processing(string &path)
 }
 bool meshing::feature(Mesh &mesh, string &path)
 {
-	mf.angle_threshold = 0;	
-	if (!mf.read_from_file) 
+	hex_meshing.mf.angle_threshold = 0;
+	if (!hex_meshing.mf.read_from_file)
 	{
 		std::cout << "no feature file, detect based on angle" << std::endl;
-		mf.angle_threshold = 0;	
-		mf.orphan_curve = true;
-		mf.orphan_curve_single = true;
+		hex_meshing.mf.angle_threshold = 0;
+		hex_meshing.mf.orphan_curve = true;
+		hex_meshing.mf.orphan_curve_single = true;
 	}
 
-	mf.tri = mesh;
-	triangle_mesh_feature(mf);
-	build_feature_graph(mf, fg);
+	hex_meshing.mf.tri = mesh;
+	triangle_mesh_feature(hex_meshing.mf);
+	build_feature_graph(hex_meshing.mf, hex_meshing.fg);
 
-	if(!mf.read_from_file)
+	if(!hex_meshing.mf.read_from_file)
 	{
 		;
 	}
@@ -73,9 +79,8 @@ bool meshing::feature(Mesh &mesh, string &path)
 }
 bool meshing::pipeline(Mesh &hmesh)
 {
-	grid_hex_meshing_bijective hex_meshing;
-	if(args.Hausdorff_ratio_t != 0)
-		hex_meshing.HR = args.Hausdorff_ratio_t;
+	if(hex_meshing.args.Hausdorff_ratio_t != 0)
+		hex_meshing.HR = hex_meshing.args.Hausdorff_ratio_t;
 	
 	if (hex_meshing.HR <= 0) {
 		cout << "please provide a reasonable hausdorff distance ratio > 0" << endl;
@@ -87,10 +92,10 @@ bool meshing::pipeline(Mesh &hmesh)
 	hex_meshing.MD.mesh_subB.type = Mesh_type::Hex;
 
 	hex_meshing.STOP_EXTENT_MIN = hex_meshing.STOP_EXTENT_MAX = 15;
-	if(args.edge_length_ratio != 0)
-		hex_meshing.STOP_EXTENT_MIN = hex_meshing.STOP_EXTENT_MAX = args.edge_length_ratio;
+	if(hex_meshing.args.edge_length_ratio != 0)
+		hex_meshing.STOP_EXTENT_MIN = hex_meshing.STOP_EXTENT_MAX = hex_meshing.args.edge_length_ratio;
 
-	hex_meshing.weight_opt = args.weight_opt;
+	hex_meshing.weight_opt = hex_meshing.args.weight_opt;
 	hex_meshing.pipeline("");
 
 	hmesh = hex_meshing.MD.mesh_subA;

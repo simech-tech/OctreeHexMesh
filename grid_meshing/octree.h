@@ -13,21 +13,23 @@
 /**
  * @brief      Class for octree grid.
  */
-struct Node {
+struct Node
+{
 public:
 	// Data members
 	std::array<int, 6> neighNodeId;
-	Eigen::Vector3i    position;
+	Eigen::Vector3i position;
 
 public:
 	// Default constructor, sets neighbor ids to -1
-	Node() {
+	Node()
+	{
 		std::fill(neighNodeId.begin(), neighNodeId.end(), -1);
 	};
 
 	// Accessors
-	int  prev(int axis) const { return neighNodeId[2 * axis]; }
-	int  next(int axis) const { return neighNodeId[2 * axis + 1]; }
+	int prev(int axis) const { return neighNodeId[2 * axis]; }
+	int next(int axis) const { return neighNodeId[2 * axis + 1]; }
 	void setPrev(int axis, int id) { neighNodeId[2 * axis] = id; }
 	void setNext(int axis, int id) { neighNodeId[2 * axis + 1] = id; }
 };
@@ -35,7 +37,8 @@ public:
 // Octree Cell //
 /////////////////
 
-struct Cell {
+struct Cell
+{
 public:
 	// Data members
 	int firstChild;
@@ -44,22 +47,24 @@ public:
 
 public:
 	// Default constructor, sets firstChild and neighbors to -1
-	Cell() : firstChild(-1) {
+	Cell() : firstChild(-1)
+	{
 		std::fill(neighCellId.begin(), neighCellId.end(), -1);
 	};
 
 	// Accessors
-	int  corner(int localId) const { return cornerNodeId[localId]; }
+	int corner(int localId) const { return cornerNodeId[localId]; }
 	void setCorner(int localId, int value) { cornerNodeId[localId] = value; }
 
 	// Adjacent cells
-	int  adj(int axis, int dir) const { return neighCellId[2 * axis + dir]; }
-	int  prev(int axis) const { return neighCellId[2 * axis]; }
-	int  next(int axis) const { return neighCellId[2 * axis + 1]; }
+	int adj(int axis, int dir) const { return neighCellId[2 * axis + dir]; }
+	int prev(int axis) const { return neighCellId[2 * axis]; }
+	int next(int axis) const { return neighCellId[2 * axis + 1]; }
 	void setPrev(int axis, int id) { neighCellId[2 * axis] = id; }
 	void setNext(int axis, int id) { neighCellId[2 * axis + 1] = id; }
 };
-class OctreeGrid {
+class OctreeGrid
+{
 
 public:
 	/////////////////////////////
@@ -75,14 +80,16 @@ public:
 	///////////////////////
 
 	// Axis
-	enum : int {
+	enum : int
+	{
 		X = 0,
 		Y = 1,
 		Z = 2,
 	};
 
 	// Cell corners
-	enum : int {
+	enum : int
+	{
 		CORNER_X0_Y0_Z0 = 0,
 		CORNER_X1_Y0_Z0 = 1,
 		CORNER_X1_Y1_Z0 = 2,
@@ -137,14 +144,16 @@ public:
 	int dimension() const { return 3; }
 
 	// Number of nodes
-	int numNodes() const { return (int) m_Nodes.size(); }
+	int numNodes() const { return (int)m_Nodes.size(); }
 
 	// Number of cells
-	int numCells() const { return (int) m_Cells.size(); }
+	int numCells() const { return (int)m_Cells.size(); }
 
 	// Node position
-	Eigen::Vector3i nodePos(int nodeId) const {
-		assert(nodeId != -1); return m_Nodes[nodeId].position;
+	Eigen::Vector3i nodePos(int nodeId) const
+	{
+		assert(nodeId != -1);
+		return m_Nodes[nodeId].position;
 	}
 
 	// Cell center position
@@ -160,7 +169,11 @@ public:
 	int cellExtent(int cellId) const;
 
 	// Return true iff the cell has no children
-	bool cellIsLeaf(int cellId) const { assert(cellId != -1); return m_Cells[cellId].firstChild == -1; }
+	bool cellIsLeaf(int cellId) const
+	{
+		assert(cellId != -1);
+		return m_Cells[cellId].firstChild == -1;
+	}
 
 	// Returns true iff the octree is 2:1 graded
 	bool is2to1Graded() const;
@@ -180,19 +193,39 @@ private:
 	///////////////////////
 
 	// Prev node along axis
-	int prevNode(int nodeId, int axis) const { assert(nodeId != -1); return m_Nodes[nodeId].prev(axis); }
+	int prevNode(int nodeId, int axis) const
+	{
+		assert(nodeId != -1);
+		return m_Nodes[nodeId].prev(axis);
+	}
 
 	// Next node along axis
-	int nextNode(int nodeId, int axis) const { assert(nodeId != -1); return m_Nodes[nodeId].next(axis); }
+	int nextNode(int nodeId, int axis) const
+	{
+		assert(nodeId != -1);
+		return m_Nodes[nodeId].next(axis);
+	}
 
 	// Prev cell along axis
-	int prevCell(int cellId, int axis) const { assert(cellId != -1); return m_Cells[cellId].prev(axis); }
+	int prevCell(int cellId, int axis) const
+	{
+		assert(cellId != -1);
+		return m_Cells[cellId].prev(axis);
+	}
 
 	// Next cell along axis
-	int nextCell(int cellId, int axis) const { assert(cellId != -1); return m_Cells[cellId].next(axis); }
+	int nextCell(int cellId, int axis) const
+	{
+		assert(cellId != -1);
+		return m_Cells[cellId].next(axis);
+	}
 
 	// Next cell along axis in direction dir (\in {0, 1})
-	int adjCell(int cellId, int axis, int dir) const { assert(cellId != -1); return m_Cells[cellId].adj(axis, dir); }
+	int adjCell(int cellId, int axis, int dir) const
+	{
+		assert(cellId != -1);
+		return m_Cells[cellId].adj(axis, dir);
+	}
 
 private:
 	/////////////////////////
@@ -243,9 +276,10 @@ private:
 public:
 	// Traverse the leaf cells recursively and split them according to the predicate function
 	void subdivide(std::function<bool(int, int, int, int)> predicate,
-		bool graded = false, bool paired = false, int maxCells = -1);
+				   bool graded = false, bool paired = false, int maxCells = -1);
 	void subdivide(std::function<bool(int, int, int, int)> predicate, std::vector<int> &tb_subdivided_cells,
-		bool graded = false, bool paired = false, int maxCells = -1);
+				   bool graded = false, bool paired = false, int maxCells = -1);
+
 public:
 	/////////////////
 	// Mesh export //
@@ -268,4 +302,3 @@ public:
 	// Subdivide a cell into 8 child cells
 	void testSubdivideRandom(bool graded, bool paired);
 };
-

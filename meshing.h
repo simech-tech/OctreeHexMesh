@@ -10,7 +10,8 @@
 class meshing
 {
 public:
-	meshing(void) {}; ~meshing(void) {};
+	meshing(arguments& args);
+	~meshing(void) {};
 	bool processing(string &path);
 	bool pipeline(Mesh &hmesh);
 	bool feature(Mesh &mesh, string &path);
@@ -22,6 +23,7 @@ public:
 
 	Mesh mesho, meshob;
 	Mesh_Quality mqo;
+	grid_hex_meshing_bijective hex_meshing;
 private:
 	h_io io;
 };
