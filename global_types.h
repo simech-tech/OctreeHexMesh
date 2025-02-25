@@ -526,7 +526,7 @@ struct Mesh_Feature
 
 	vector<Vector3d> Tcenters;
 	double ave_length;
-	double angle_threshold = 0;
+	double angle_threshold = 2.26893; // origin is 0
 	bool orphan_curve = true;
 	bool orphan_curve_single = true;
 	//read_from_file 

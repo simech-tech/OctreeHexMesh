@@ -6,6 +6,10 @@ using namespace std;
 meshing::meshing(arguments& args) 
 {
 	hex_meshing.args = args;
+	if (args.Hard_Feature)
+	{
+		hex_meshing.mf.angle_threshold = 2.26893;
+	}
 }
 
 bool meshing::processing(string &path)
@@ -57,11 +61,11 @@ bool meshing::processing(string &path)
 }
 bool meshing::feature(Mesh &mesh, string &path)
 {
-	hex_meshing.mf.angle_threshold = 0;
+	// hex_meshing.mf.angle_threshold = 2.26893;
 	if (!hex_meshing.mf.read_from_file)
 	{
 		std::cout << "no feature file, detect based on angle" << std::endl;
-		hex_meshing.mf.angle_threshold = 0;
+		// hex_meshing.mf.angle_threshold = 2.26893;
 		hex_meshing.mf.orphan_curve = true;
 		hex_meshing.mf.orphan_curve_single = true;
 	}
@@ -72,7 +76,8 @@ bool meshing::feature(Mesh &mesh, string &path)
 
 	if(!hex_meshing.mf.read_from_file)
 	{
-		;
+		// write feature
+		io.write_feature_Graph_FGRAPH(hex_meshing.mf, path + "_auto.fgraph");
 	}
 
 	return true;
